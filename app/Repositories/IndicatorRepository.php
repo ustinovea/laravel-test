@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Repositories;
 
 use App\Models\Indicator;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 /**
  * Class IndicatorRepository
@@ -17,6 +18,8 @@ class IndicatorRepository
      * @param int $id
      *
      * @return Indicator
+     *
+     * @throws ModelNotFoundException
      */
     public function findById(int $id): Indicator
     {

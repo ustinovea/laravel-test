@@ -7,6 +7,7 @@ namespace App\Services;
 use App\Exceptions\NotFoundGeneratorTypeException;
 use App\Models\Indicator;
 use App\Repositories\IndicatorRepository;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 /**
  * Class IndicatorGeneratorService
@@ -54,6 +55,8 @@ class IndicatorGeneratorService
      * @param int $id
      *
      * @return Indicator
+     *
+     * @throws ModelNotFoundException
      */
     public function findIndicator(int $id): Indicator
     {

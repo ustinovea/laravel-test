@@ -24,7 +24,7 @@ class IndicatorRequest extends FormRequest
     public function rules()
     {
         return [
-            'type' => 'required|string'
+            'type' => 'required|string|in:string,digits,guid,symbol_and_digits'
         ];
     }
 }
